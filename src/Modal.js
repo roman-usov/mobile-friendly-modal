@@ -56,11 +56,28 @@ const Content = styled.div`
   background: white;
   border-radius: 8px;
   width: 65%;
+  
+  @media(max-width: 700px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: revert;
+  }
 `;
 
 const Header = styled.header`
   padding: 16px;
   padding-bottom: 8px;
+  
+  @media(max-width: 700px) {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid darkgray;
+    padding: 4px;
+    padding-left: 16px;
+    
+    
+  }
 `;
 
 const CloseButton = styled.button`
@@ -73,6 +90,16 @@ const CloseButton = styled.button`
   height: 48px;
   cursor: pointer;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media(max-width: 700px) {
+    position: static;
+    color: black;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const Title = styled.h2`
